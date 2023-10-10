@@ -50,5 +50,14 @@ namespace HastaneClient.Controllers
             }
             return View();
         }
+        public IActionResult Delete(int id)
+        {
+            var result = _httpClient.DeleteAsync(apiUrl + "Delete/" + id);
+            if (result.IsCompletedSuccessfully)
+            {
+
+            }
+            return View();
+        }
     }
 }
